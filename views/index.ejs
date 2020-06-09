@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>
+        ADD elements
+    </h2>
+    <form method="POST" action="/table/add">
+        <input placeholder="name" name="a_name">
+        <input placeholder="age" name="a_age">
+    
+     <button type="submit">add</button>
+    </form>
+    
+    <h2>
+        DELETE elements
+    </h2>
+    <form method="POST" action="/table/delete">
+        <input placeholder="id" name="d_id">
+ 
+    
+     <button type="submit">delete</button>
+    </form>
+    <h2>
+        UPDATE elements
+    </h2>
+    <form method="POST" action="/table/update">
+        <input placeholder="id" name="u_id">
+        <input placeholder="name" name="u_name">
+        <input placeholder="age" name="u_age">
+    
+        <button type="submit">update</button>
+    </form>
+    <h2>Table :</h2>
+    <table border="4">
+        <tr>
+            <td>name</td>
+            <td>age</td>
+            <td>id</td>
+        </tr>
+        <% for(var i=0;i<table.length;++i){ %>
+        <tr>
+            <td><%= table[i].name%></td>
+            <td><%= table[i].age%></td>
+            <td><%= table[i].id%></td>
+        </tr>
+        <% } %>
+    </table>
+</body>
+</html>
