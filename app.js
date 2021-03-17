@@ -18,5 +18,5 @@ path = require("path");
 app.use("/public", express.static("public"));
 //using ejs
 app.get('/', (r, s) => s.send('Hello'))
-app.use('/table', routes)//mvc
+app.use('/table', routes)//mvc + routes
 app.listen(1000);
